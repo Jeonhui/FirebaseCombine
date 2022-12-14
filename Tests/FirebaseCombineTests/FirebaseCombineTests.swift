@@ -1,4 +1,5 @@
 import XCTest
+
 @testable import FirebaseCombine
 
 final class FirebaseCombineTests: XCTestCase {
