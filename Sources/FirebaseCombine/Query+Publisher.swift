@@ -10,7 +10,7 @@ import Combine
 
 extension Query {
     // MARK: - READ
-    func getDocumentsPublisher<T: Decodable>(type: T.Type) -> AnyPublisher<[T], Error> {
+    func getQueryDocumentsPublisher<T: Decodable>(type: T.Type) -> AnyPublisher<[T], Error> {
         Future<[T], Error> { [weak self] promise in
             guard let self = self else {
                 promise(.failure(FirebaseCombineError.objectError))
@@ -29,7 +29,7 @@ extension Query {
         }.eraseToAnyPublisher()
     }
     
-    func getDocumentsPublisher() -> AnyPublisher<QuerySnapshot, Error> {
+    func getQueryDocumentsPublisher() -> AnyPublisher<QuerySnapshot, Error> {
         Future<QuerySnapshot, Error> { [weak self] promise in
             guard let self = self else {
                 promise(.failure(FirebaseCombineError.objectError))

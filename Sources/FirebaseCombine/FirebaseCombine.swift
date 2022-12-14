@@ -1,5 +1,5 @@
 public struct FirebaseCombine {
-    public private(set) var text = "Hello, World!"
+    public private(set) var text = "FirebaseCombine"
 
     public init() {
     }
